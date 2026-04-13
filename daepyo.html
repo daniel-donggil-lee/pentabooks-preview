@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>펜타북스 윤문 방법론 — 작업자 기록</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#0a0a0a; --mute:#6b6b6b; --line:#e7e7e7;
+    --accent:#0a0a0a; --hi:#FFF4CE; --add:#1F6FEB; --del:#C0392B;
+    --pill-bg:#0a0a0a; --pill-fg:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html,body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;margin:0;letter-spacing:-0.01em}
+  body{line-height:1.65;font-size:16px}
+  .wrap{max-width:880px;margin:0 auto;padding:72px 28px 120px}
+  .kicker{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);margin-bottom:18px}
+  h1{font-size:44px;line-height:1.15;font-weight:800;margin:0 0 18px;letter-spacing:-0.03em}
+  h2{font-size:26px;font-weight:800;letter-spacing:-0.02em;margin:64px 0 14px;padding-top:44px;border-top:1px solid var(--line)}
+  h3{font-size:18px;font-weight:700;letter-spacing:-0.01em;margin:32px 0 10px}
+  p{margin:0 0 14px;color:#1a1a1a}
+  .lede{font-size:19px;color:#1a1a1a;margin-bottom:24px}
+  .meta{display:flex;gap:18px;color:var(--mute);font-size:13px;margin:14px 0 36px}
+  .meta span{border-right:1px solid var(--line);padding-right:18px}
+  .meta span:last-child{border:0}
+  .pill{display:inline-block;background:var(--pill-bg);color:var(--pill-fg);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:600;letter-spacing:0.04em}
+  .pill.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-weight:700;background:#fafafa}
+  blockquote{margin:18px 0;padding:14px 18px;background:#fafafa;border-left:3px solid var(--ink);font-size:15px}
+  code{background:#f4f4f4;padding:2px 6px;border-radius:4px;font-size:13px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+  .card{border:1px solid var(--line);border-radius:10px;padding:18px}
+  .card h4{margin:0 0 8px;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--mute)}
+  .diff-del{color:var(--del);text-decoration:line-through}
+  .diff-add{color:var(--add);font-weight:700;text-decoration:underline}
+  .steps{counter-reset:s;padding:0;margin:0;list-style:none}
+  .steps li{counter-increment:s;padding-left:44px;position:relative;margin:14px 0;padding-bottom:14px;border-bottom:1px dashed var(--line)}
+  .steps li:last-child{border:0}
+  .steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:-2px;font-weight:800;color:var(--ink);background:#fafafa;border-radius:6px;width:32px;text-align:center;padding:2px 0;font-size:13px}
+  .callout{background:#0a0a0a;color:#fff;border-radius:12px;padding:24px 26px;margin:24px 0}
+  .callout h3{color:#fff;margin-top:0}
+  .callout p,.callout li,.callout b{color:#fff}
+  .footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
+  .kv{display:grid;grid-template-columns:160px 1fr;gap:6px 18px;font-size:14px;margin:14px 0}
+  .kv dt{color:var(--mute)}
+  .kv dd{margin:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">Penta Books · Polish Methodology Note</div>
+  <h1>찜질방 간호사 원고<br>윤문 방법론 기록</h1>
+  <p class="lede">
+    대표님의 <b>제자 작가님</b>으로부터 들어온 첫 윤문 의뢰. 대표님의 이름을 믿고 맡긴 원고이기에, 대표님께서 제자 작가님께 결과물을 건네기 전에
+    <b>"이 사람들이 어떤 태도와 원칙으로 내 제자 문장을 만졌는가"</b>를 한눈에 확인하실 수 있도록 작업 전 과정을 투명하게 기록했습니다.
+  </p>
+  <div class="meta">
+    <span>작성자 · 이동길</span>
+    <span>작업일 · 2026-04-13</span>
+    <span>의뢰 경로 · 제자 작가님 → 이은경 → 펜타북스</span>
+    <span>대상 원고 · 찜질방 간호사 (프롤로그 + Unit 1-1)</span>
+  </div>
+
+  <span class="pill">TL;DR</span>
+  <p style="margin-top:14px">
+    대표님의 제자 작가님 첫 원고라는 점을 가장 무겁게 받아들였습니다.
+    대표님께서 보내준 블로그 2건의 윤문 원칙을 그대로 쓰지 않고,
+    <b>권위 있는 출처 5개 계열(국립국어원 · 김정선 · 이오덕 · Strunk &amp; White · 출판 실무)</b>을 직접 교차 검증해
+    펜타북스만의 윤문 원칙 v1을 먼저 세운 뒤,
+    그 원칙을 시스템 프롬프트로 탑재한 <b>윤문 엔진(polish_essay.py)</b>을 구축했습니다.
+    결과물은 두 버전으로 제공합니다. <b>버전 A</b>는 원칙만 적용한 기본 윤문,
+    <b>버전 B</b>는 대표님의 에세이 샘플에서 추출한 스타일 레이어를 한 번 더 덧씌운 결과입니다.
+    (※ 버전 B의 "스타일 샘플"로 대표님 글을 쓴 이유는 아래 3번 박스에서 설명합니다.)
+  </p>
+
+  <h2>1. 이 의뢰의 맥락을 어떻게 받아들였나</h2>
+  <p>
+    이번 의뢰는 단순한 외주가 아니라, <b>"대표님께서 제자 작가님께 직접 추천할 수 있는 수준"</b>의 결과물이 나와야 하는 일입니다.
+    제자 작가님 입장에서는 대표님을 통해 들어온 일이고, 대표님 입장에서는 본인 이름값이 걸린 일이라는 점을 가장 먼저 염두에 두었습니다.
+    그래서 단건 알바처럼 빠르게 처리하지 않고, 아래 세 가지를 동시에 충족하도록 설계했습니다.
+  </p>
+  <div class="grid">
+    <div class="card">
+      <h4>제자 작가님을 위해</h4>
+      <p style="margin:0">첫 출간 원고를 맡긴 분이 <b>"아, 내가 쓰려던 건 이거였다"</b>는 감탄이 나올 수 있는 수준으로 다듬기. 작가 고유 목소리는 절대 덮지 않기.</p>
+    </div>
+    <div class="card">
+      <h4>이은경 대표님 이름값을 위해</h4>
+      <p style="margin:0">대표님께서 제자 작가님께 "펜타북스에 맡겼다"고 말씀하셨을 때 부끄럽지 않도록 <b>권위 출처 기반의 원칙</b>과 <b>재현 가능한 엔진</b>으로 뒷받침.</p>
+    </div>
+    <div class="card" style="grid-column:1 / -1">
+      <h4>펜타북스 사업부를 위해</h4>
+      <p style="margin:0">다음 원고, 다음 제자 작가님, 다음 계약에서도 동일 품질이 재현되도록 <b>원칙 문서 + 엔진 + 납품 포맷</b>을 세트로 자산화. 이번 의뢰는 펜타북스의 1호 레퍼런스입니다.</p>
+    </div>
+  </div>
+
+  <h2>2. 블로그 2건을 "최상위 원칙"으로 받아들이지 않은 이유</h2>
+  <p>
+    대표님께서 참고하라고 공유해 준 블로그 2건(beath001, kairossocial)을 먼저 꼼꼼히 읽었습니다.
+    결론부터 말하면 <b>두 블로그는 마케팅 문서이지 편집 매뉴얼이 아닙니다</b>.
+    실제 문장을 어떻게 고칠지(적의를 보이는 것들 / 번역투 / 이중피동 등)의 구체 규칙은 일절 노출되지 않습니다.
+    서비스 프로세스·가격·차별점이 중심이었고, 그것은 참고 자료이지 원칙 자체가 될 수 없었습니다.
+  </p>
+  <table>
+    <tr><th style="width:36%">항목</th><th>블로그 2건</th><th>펜타북스가 직접 찾은 권위 출처</th></tr>
+    <tr><td>3단계 구분(교정/교열/윤문)</td><td>언급만</td><td>명확히 정의 (학계·실무 공통)</td></tr>
+    <tr><td>"적의를 보이는 것들"</td><td>없음</td><td>김정선 『내 문장이 그렇게 이상한가요』 대원칙</td></tr>
+    <tr><td>번역투 12종</td><td>없음</td><td>이오덕 + 한빛출판 실무</td></tr>
+    <tr><td>이중피동 / 능동태 우선</td><td>없음</td><td>김정선 + Strunk &amp; White</td></tr>
+    <tr><td>작가 목소리 보호</td><td>슬로건 수준</td><td>에세이 장르 필수 조항</td></tr>
+    <tr><td>추적기능 ON/OFF 2종 납품</td><td>있음 (실무 관행)</td><td>—</td></tr>
+  </table>
+  <p>블로그에서 흡수한 것은 <b>추적기능 2종 납품 관행</b>과 <b>"편집부의 눈으로 글 전체를 본다"는 태도</b> 정도입니다. 실제 칼날이 되는 규칙은 권위 출처에서 전부 가져왔습니다.</p>
+
+  <h2>3. 펜타북스 윤문 원칙 v1</h2>
+  <p>3계층 순차 처리 — 교정 → 교열 → 윤문. 뒤로 갈수록 주관적이고 창작적입니다.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h4>A · 교정 (협상 없이 수정)</h4>
+      <p style="margin:0">국립국어원 어문규범. 맞춤법·띄어쓰기·문장부호·외래어·오탈자. 규칙이 명확하므로 기계적으로 처리.</p>
+    </div>
+    <div class="card">
+      <h4>B · 교열 (필요한 만큼)</h4>
+      <p style="margin:0">주술 호응, 시제 일관, 조사 정확성, 중복 제거, <b>이중피동 금지</b>(보여지다→보이다), 추상명사+피동 능동화.</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h4>C · 윤문 (여기가 돈값의 핵심)</h4>
+    <ul style="margin:6px 0 0 18px;padding:0">
+      <li><b>은유 업그레이드</b>: 느슨한 비유는 더 찌르는 이미지로</li>
+      <li><b>감각 디테일 주입</b>: "무덥다" → 온도/땀의 질감, "시끄럽다" → 어떤 소리인지</li>
+      <li><b>중복·동어반복 압축</b>, <b>리듬 재설계</b>(긴/짧은 문장 교차)</li>
+      <li><b>첫 문장·마무리 문장 강화</b> — 훅과 잔상</li>
+      <li>일반동사(하다/되다/있다) → 구체동사, 흔한 형용사 → 찌르는 형용사</li>
+      <li>번역투 12종(대명사 남발, '의' 남용, "~하는 중이다", "~로부터" 등) 정리</li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <h3>제1원칙 — 손대지 말 것의 목록</h3>
+    <p style="margin:0">작가 목소리·관점·유머 톤·화법, 의도된 도치/반복/파편문, 감정 고조 문장. 의심스러우면 <b>손대지 않는다</b>. 윤문은 작가를 "더 작가답게" 만드는 일이지 편집자의 글로 바꾸는 일이 아닙니다.</p>
+  </div>
+
+  <h2>4. 엔진 구조 — polish_essay.py</h2>
+  <p>입력은 PDF/HWP/DOCX/TXT 모두 받고, 출력은 DOCX(비교표 + diff 시각화)입니다. 원칙 문서는 엔진의 시스템 프롬프트에 그대로 내장돼 단일 진실 공급원 역할을 합니다.</p>
+
+  <ol class="steps">
+    <li><b>원문 로드</b> — PDF는 텍스트 레이어를 우선 추출해 쉼표·토씨까지 100% 보존. Vision OCR은 최후 수단.</li>
+    <li><b>문단 분리</b> — PDF 래핑 공백을 제거하고 원 저자 문단 단위로 복원.</li>
+    <li><b>윤문 엔진 호출</b> — 3계층 원칙을 담은 시스템 프롬프트 + Tool Use로 구조 강제.</li>
+    <li><b>버전 A 생성</b> — 원칙만 적용한 기본 윤문.</li>
+    <li><b>버전 B 생성</b> — 대표님의 에세이 샘플(HWP)에서 문장 리듬·어휘·톤 추출 후 가산. 제자 작가님 본인 목소리가 덮이면 자동으로 A로 회귀.</li>
+    <li><b>DOCX 출력</b> — 5열 표: <em>원문 / 버전A / A diff / 버전B / B diff</em>. diff는 단어 단위 비교 (<span class="diff-del">삭제</span> / <span class="diff-add">추가</span>).</li>
+  </ol>
+
+  <h2>5. 버전 A vs 버전 B — 무엇이 다른가</h2>
+  <table>
+    <tr><th>항목</th><th>버전 A (기본)</th><th>버전 B (스타일 가산)</th></tr>
+    <tr><td>적용 원칙</td><td>펜타북스 윤문 v1의 A·B·C 계층</td><td>A의 전제 위에 <b>대표님의 에세이 샘플</b>에서 추출한 문장 길이·어휘·리듬·감정 톤을 가산 (이유: 제자 작가님이 대표님 아래에서 글을 배워 왔기 때문에, 대표님의 문장 결이 제자 작가님에게 가장 자연스러운 '윗 선배의 결'이 됨)</td></tr>
+    <tr><td>위험</td><td>원칙은 깔끔하나 '개성'이 약할 수 있음</td><td>스타일이 강해 작가 원본 목소리를 덮을 위험</td></tr>
+    <tr><td>용도</td><td>작가 목소리를 최대한 보수적으로 지키고 싶을 때</td><td>작가가 "더 에세이스트답게" 되고 싶을 때</td></tr>
+    <tr><td>안전장치</td><td>—</td><td>샘플이 원본을 덮는다고 판단되면 자동으로 A 수준으로 회귀</td></tr>
+  </table>
+
+  <h3>실제 변화 예시 (프롤로그)</h3>
+  <table>
+    <tr><th>원문</th><th>버전 A</th><th>적용 원칙</th></tr>
+    <tr><td>잠시 난감한 표정을 짓는다</td><td>매번 잠깐 입을 다문다</td><td>일반동사 → 구체동사</td></tr>
+    <tr><td>내 대답은 늘 듣는 사람의 눈을 동그랗게 만들기 때문이다</td><td>내 대답이 상대방의 눈을 순식간에 동그랗게 부풀려놓기 때문이다</td><td>감각 디테일 주입</td></tr>
+    <tr><td>3교대의 늪</td><td>3교대의 지옥</td><td>은유 강화</td></tr>
+    <tr><td>병동보다 더 뜨겁고 습한 여탕</td><td>병동보다 더 뜨겁고 숨 막히는 여탕</td><td>추상 → 감각</td></tr>
+    <tr><td>…후벼 파는 삶이 시작된 것이다. 혈압계를 쥐고…</td><td>…후벼 판다. 혈압계를 쥐고…</td><td>장문 분절 → 호흡 설계</td></tr>
+  </table>
+
+  <h2>6. 납품 구성</h2>
+  <div class="kv">
+    <dt>버전AB_프롤로그.docx</dt><dd>5열 비교표 + 변경 로그 + 범례</dd>
+    <dt>버전AB_unit1-1.docx</dt><dd>5열 비교표 + 변경 로그 + 범례</dd>
+    <dt>원문/*.txt</dt><dd>PDF 텍스트 레이어로 추출한 원문 SSoT</dd>
+    <dt>01_윤문원칙/</dt><dd>리서치·비교표·v1 원칙 문서 3종</dd>
+    <dt>02_엔진/polish_essay.py</dt><dd>재사용 가능한 단일 엔진 (PDF/HWP/DOCX/TXT, A/B 모드)</dd>
+  </div>
+
+  <h2>7. 대표님께 여쭙고 싶은 결정 사항</h2>
+  <ol class="steps">
+    <li>버전 A · B 중 <b>어느 쪽을 제자 작가님께 기준 샘플로 먼저 보여드릴지</b> (B가 대표님 톤을 얹은 것이라, 제자 작가님이 불편해할 가능성도 있어 대표님 판단이 중요).</li>
+    <li>대표님께서 제자 작가님께 보내실 때 동봉할 <b>작가님용 안내 HTML</b>의 수정 요청 사항.</li>
+    <li>납품 표준에 <b>추적기능 ON/OFF 2종 DOCX</b> 추가 여부 (kairossocial 블로그의 실무 관행).</li>
+    <li>첫 꼭지 피드백 확정 후 <b>본작업(134p 전체)</b>의 가격·납기 재산정.</li>
+  </ol>
+
+  <div class="footer">
+    펜타북스 · Polish Methodology Note · v1.0<br>
+    본 문서는 이은경 대표님 내부 검토용이며, 제자 작가님께는 별도의 작가님용 안내 HTML이 전달됩니다.
+  </div>
+</div>
+</body>
+</html>
